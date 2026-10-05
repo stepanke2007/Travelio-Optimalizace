@@ -49,8 +49,12 @@ a {
     color: #0a7ea4;
 }
 
+.nav {
+    display: flex;
+    gap: clamp(8px, 2vw, 28px);
+}
+
 .nav a {
-    margin-left: 28px;
     color: #333333;
     text-decoration: none;
     font-weight: 600;
@@ -242,9 +246,6 @@ a {
 .about-title {
     font-size: 36px;
     margin-bottom: 20px;
-}
-
-.about-title {
     color: #000000;
 }
 
@@ -340,7 +341,7 @@ a {
 }
 
 /* Newsletter */
-
+/*
 .newsletter-box {
     margin: 40px auto;
     padding: 30px;
@@ -357,6 +358,7 @@ a {
     border: none;
     border-radius: 6px;
 }
+*/
 
 /* Responzivita */
 
@@ -374,7 +376,6 @@ a {
     }
 
     .nav a {
-        margin-left: 14px;
         font-size: 15px;
     }
 
@@ -384,5 +385,23 @@ a {
 
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-inner {
+        height: auto;
+        min-height: 70px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
     }
 }
